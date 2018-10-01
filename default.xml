@@ -8,7 +8,10 @@
 
   <project path="kernel/rpi" name="kernel_rpi" revision="arpi-4.14.y" remote="arpi"/>
   <project path="hardware/rpi" name="hardware_rpi" revision="oreo" remote="arpi"/>
-  <project path="device/brcm/rpi3" name="device_brcm_rpi3" revision="oreo" remote="arpi"/>
+
+  <remote name="peyo" fetch="ssh://git@github.com/peyo-hd"/>
+  <project path="device/brcm/rpi3" name="device_brcm_rpi3" revision="oreo" remote="peyo"/>
+  <project path="vendor/peyo/RpLauncher" name="RpLauncher" revision="pie" remote="peyo"/>
 
   <remove-project name="device/asus/fugu-kernel" />
   <remove-project name="device/google/dragon-kernel" />
